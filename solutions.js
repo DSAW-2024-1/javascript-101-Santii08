@@ -1,13 +1,11 @@
-// Sum of Two Numbers
+// Suma de dos números
 function sum(a, b) {
-  if (Number.isInteger(a && b)) {
+  if (!isNaN(a) && !isNaN(b)) {
     return a + b;
   } else {
     console.log("Los datos de entrada no son adecuados");
     return;
   }
-
-  // Add your code here
 }
 
 // Factorial of a Number
