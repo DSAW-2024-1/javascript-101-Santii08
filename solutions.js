@@ -38,39 +38,38 @@ function findLargest(arr) {
   return Math.max(...arr);
 }
 
-// Count Vowels in a String
 function countVowels(str) {
-  if (typeof str === "") {
+  if (typeof str === "string") {
     let palabra = str.toLowerCase();
-    let voacles = palabra.match(/[aeiou]/g);
-    let total = voacles.size();
+    let vocales = palabra.match(/[aeiou]/g);
+    let total= voacles.size();
     return total;
   } else {
     console.log("Los datos de entrada no son adecuados");
     return;
   }
-
-  // Add your code here
 }
 
 // Check if a Number is Prime
 function isPrime(n) {
-  if (!Number.isInteger(n)) {
-    throw new Error("Los datos de entrada no son adecuados");
+  // Add your code here
+  if (Number.isInteger(n)) {
+    if (n <= 1) return false;
+    if (n <= 3) return true;
+
+    if (n % 2 === 0 || n % 3 === 0) return false;
+
+    let i = 5;
+    while (i * i <= n) {
+      if (n % i === 0 || n % (i + 2) === 0) return false;
+      i += 6;
+    }
+
+    return true;
+  } else {
+    console.log("Los datos de entrada no son adecuados");
+    return;
   }
-
-  if (n <= 1) return false;
-  if (n <= 3) return true;
-
-  if (n % 2 === 0 || n % 3 === 0) return false;
-
-  let i = 5;
-  while (i * i <= n) {
-    if (n % i === 0 || n % (i + 2) === 0) return false;
-    i += 6;
-  }
-
-  return true;
 }
 
 module.exports = {
