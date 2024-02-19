@@ -42,7 +42,7 @@ function countVowels(str) {
   if (typeof str === "string") {
     let palabra = str.toLowerCase();
     let vocales = palabra.match(/[aeiou]/g);
-    let total= voacles.size();
+    let total= total = vocales ? vocales.length : 0;
     return total;
   } else {
     console.log("Los datos de entrada no son adecuados");
